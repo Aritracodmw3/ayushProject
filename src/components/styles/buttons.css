@@ -18,11 +18,12 @@
 
 .custom-buttons {
     z-index: 11;
-    display: inline-block;
-    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1vh;
     font-size: 16px;
+    height: 4vh;
     font-weight: 600;
-    height: 5vh;
     text-align: center;
     text-decoration: none;
     color: #ffffff;
@@ -32,6 +33,16 @@
     margin: 1px;
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
+    .custom-buttons {
+        font-size: 14px; /* Smaller font size */
+        height: 4vh; /* Allow the height to adjust based on content */
+        padding: 5px; /* Increase padding for better touch accessibility */
+        margin: 2px; /* Adjust margins if needed */
+        width: 100%; /* Ensure the button takes the full width of its container */
+        text-align: center; /* Center the text */
+    }
+}
 .buttons-left {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
