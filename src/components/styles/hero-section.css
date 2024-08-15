@@ -64,6 +64,14 @@
     border-radius: 8px; /* Optional: to give rounded corners */
     margin-top: 20px;
   }
+  .logo-image-container img{
+    z-index: 100;
+    width: 10vw; /* Fixed width */
+    height: auto;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ffffffaa;
+  }
   
   .center-image {
     max-width: 100%;
@@ -151,8 +159,12 @@
     border: 1px solid lightgrey;
   }
   
-  .empty-container {
-    min-height: 50vh;
+  .empty-container {   
+    z-index: 2;
+    position: sticky;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
   }
   
 
@@ -178,4 +190,12 @@
 .custom-link{
   margin-left: 10px;
   
+}
+.quote-of-day{
+  padding: 40px;
+  background-color: #ffffff77;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
 }

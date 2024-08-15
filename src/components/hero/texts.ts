@@ -16,6 +16,9 @@ const text13 = "Research Intern, Indian Railways, India";
 const text14 = "Assistant Professor, Department of AI/ML, SSIPMT, Raipur, India";
 const text15 = "Lecturer and Faculty of Computer Science, Teerthanker Mahaveer University, Moradabad, India";
 
+const text16 = " It is impossible to be a mathematician without being a poet in soul."
+const text17 = "  — Sofia Kovalevskaya, Russian mathematician"
+
 export {
     text1, 
     text2, 
@@ -30,5 +33,5 @@ export {
     text11,
     text12,
     text13,
-    text14,text15
+    text14,text15,text16,text17
 };

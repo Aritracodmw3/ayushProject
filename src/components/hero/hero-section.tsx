@@ -8,7 +8,7 @@ import researchImg from "../../assets/images/research1.jpg"
 import instaImage from "../../assets/images/instagram.jpg";
 import ayushBio from "../../assets/images/ayushbio.jpg";
 import ayushIntro from "../../assets/images/ayushIntro2.jpg";
-import journey2 from "../../assets/images/journey2_copy.jpg";
+import logo from "../../assets/images/logo_transparent.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { text1, text2, text3,  } from './texts';
 import {    text4,
@@ -22,6 +22,7 @@ import {     text11,
     text12,
     text13,
     text14,text15} from './texts';   
+import { text16,text17 } from './texts';
 import IntroComponent from '../intro-component/intro-component';
 
 const HeroSection: React.FC = () => {
@@ -73,7 +74,7 @@ const HeroSection: React.FC = () => {
                 return <IntroComponent  mainTitle={"MY JOURNEY"} postImage={[ayushImg]} subTitle={"PHd Candidate, NIT Raipur"} list_items={workExperienceTexts}/>;
             case 'home4':
                 return (
-                    <IntroComponent  mainTitle={"FIND ME HERE"} postImage={[ayushBio,instaImage]} subTitle={"....."} description={mediaLinks}/> 
+                        <IntroComponent  mainTitle={"FIND ME HERE"} postImage={[ayushBio,instaImage]} subTitle={"....."} description={mediaLinks}/> 
                 )
             default:
                 return null;
@@ -85,13 +86,38 @@ const HeroSection: React.FC = () => {
             <img src={backgroundImg} alt="Background" className="hero-background" />
             <div className="overlay">
                 <Row className='hero-content-main'>
-                    <div className="button-group">
-                        <Button variant="primary" onClick={() => setActiveSection('home')} className='custom-buttons buttons-left'>Home</Button>
-                        <Button variant="primary" onClick={() => setActiveSection('home2')} className='custom-buttons buttons-center'>Research</Button>
-                        <Button variant="primary" onClick={() => setActiveSection('home3')} className='custom-buttons buttons-center'>Works</Button>
-                        <Button variant="primary" onClick={() => setActiveSection('home4')} className='custom-buttons buttons-right'>Contact</Button>
+                    <div className='navbar-container'>
+                        <div className="button-group">
+                            <Button variant="primary" onClick={() => setActiveSection('home')} className='custom-buttons buttons-left'>Home</Button>
+                            <Button variant="primary" onClick={() => setActiveSection('home2')} className='custom-buttons buttons-center'>Research</Button>
+                            <Button variant="primary" onClick={() => setActiveSection('home3')} className='custom-buttons buttons-center'>Works</Button>
+                            <Button variant="primary" onClick={() => setActiveSection('home4')} className='custom-buttons buttons-right'>Contact</Button>    
+                        </div>
+
                     </div>
-                    <div className='empty-container'></div>
+                   
+                    <div className='empty-container'>                
+                       {activeSection ==="home" && 
+                     
+                        <div className='quote-logo-container'>
+                            
+                            <div className='logo-image-container' >
+                                <img src={logo} />
+                            </div>                           
+            
+                            <div className='quote-of-day'>
+                                <div>{text16}</div>
+                                <div>{text17}</div>
+                            </div>
+                     
+                        </div>
+
+              
+                       
+                       }
+                 
+                   
+                    </div>
                     <div className="content-section mt-3">
                         {renderContent()}
                     </div>
