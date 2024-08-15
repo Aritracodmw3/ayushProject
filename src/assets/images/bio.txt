@@ -1,0 +1,6 @@
+Ayush Banerjee is a dedicated PhD candidate in Mathematical Sciences at NIT Raipur, with a strong international research portfolio, 
+frequently traveling to London and Germany for collaborative projects. Before starting his doctoral journey, Ayush earned his M.S. in Artificial 
+Intelligence from Teesside University in the UK. His research expertise covers explainable AI, Quantum AI, Natural Language Processing (NLP), and cryptography. 
+Currently, he is engaged in advanced quantum computing research. Alongside his academic achievements, Ayush has contributed to the field as a data scientist, 
+researcher, and Assistant Professor in the Department of AI/ML at SSIPMT Raipur. His work includes the development of a deep learning-based multiclassification 
+system for ocular disease detection and numerous publications and book chapters, particularly focusing on AI's applications in healthcare.

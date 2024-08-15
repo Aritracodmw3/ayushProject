@@ -1,0 +1,181 @@
+.hero-container {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    overflow: hidden;
+  }
+  
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area */
+    z-index: 1; /* Place it behind the overlay and content */
+  }
+  
+  .hero-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)); /* Fades from black to transparent */
+    z-index: 1; /* Place it above the background but behind the content */
+  }
+  
+
+  
+  .overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 2; /* Place it above the gradient overlay */
+    justify-content: center;
+    overflow-y: auto;
+  }
+  
+  .hero-content {
+    z-index: 3; /* Bring content above the background and overlay */
+    display: flex;
+    gap: 20px; /* Space between the image and text */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    overflow-y: auto;
+
+    /* Hide scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+  
+  .center-image-container {
+    width: 450px; /* Fixed width */
+    height: auto; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px; /* Optional: to give rounded corners */
+    margin-top: 20px;
+  }
+  
+  .center-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 8px;
+  }
+  
+  .text-background {
+    display: flex;
+    flex-direction: column; /* Ensure text blocks are stacked */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* White background with opacity */
+  }
+  
+  .intro-container {
+    display: flex;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7); /* White background with opacity */
+    border-radius: 8px;
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap;
+  }
+  
+  .title-description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+    padding: 20px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 8px;
+
+  }
+  
+  .divider {
+    width: 100%;
+    border: 1px solid rgb(173, 173, 173);
+  }
+  
+  .title-subtitle-container {
+    display: flex;
+    flex-direction: column; /* Stack title and subtitle */
+  }
+  
+  .title {
+    text-align: left;
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  
+  .subtitle {
+    text-align: left;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 18px;
+    margin-top: 20px;
+  }
+  
+  .description {
+    text-align: left;
+    color: rgb(73, 73, 73);
+    font-size: 18px;
+    width: 100%;
+    max-width: 60vw;
+    min-width: 60vw;
+    margin-top: 10px;
+    text-justify:auto;
+
+  }
+
+  .list-items {
+    text-align: left;
+    color: rgb(73, 73, 73);
+    font-size: 25px;
+    width: 100%;
+    max-width: 60vw;
+    min-width: 60vw;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid lightgrey;
+  }
+  
+  .empty-container {
+    min-height: 50vh;
+  }
+  
+
+.nav-tabs .nav-link {
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #fff;
+  color: #007bff;
+  border-color: #ddd #ddd #fff;
+}
+
+.tab-content {
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.custom-link{
+  margin-left: 10px;
+  
+}
