@@ -289,6 +289,13 @@
       max-width: 90vw;
       min-width: 90vw;
   }
+  .logo-image{
+    border-radius: 8px;
+    background-color: #ffffff99;
+    padding: 10vw;
+    max-width: 40vw;
+    min-width: 40vw;
+  }
 }
 
 
