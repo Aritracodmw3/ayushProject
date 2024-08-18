@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import { useSwipeable } from 'react-swipeable';
 import '../styles/hero-section.css';
 import '../styles/buttons.css';
-import '../styles/navigation-buttons.css';
 import backgroundImg from "../../assets/images/background.jpg";
 import ayushImg from "../../assets/images/ayush.jpg";
 import researchImg from "../../assets/images/research1.jpg";
@@ -22,12 +22,11 @@ import { text1, text2, text3 } from './texts';
 import { text4, text5, text6, text7, text8, text9, text10 } from './texts';
 import { text11, text12, text13, text14, text15 } from './texts';
 import { text16, text17 } from './texts';
-import {text18, text19, text20, text21,text22,text23, text24 ,text25} from './texts';
+import { text18, text19, text20, text21, text22, text23, text24, text25 } from './texts';
 import { mediaLinks } from './media-links';
 import IntroComponent from '../intro-component/intro-component';
 import ContactComponent from '../intro-component/contacts-components';
 import GalleryComponent from '../intro-component/gallery-component';
-import NavigationButtons from '../intro-component/navigation-buttons';
 import FooterBanner from '../intro-component/footer-banner';
 
 const HeroSection: React.FC = () => {
@@ -37,9 +36,8 @@ const HeroSection: React.FC = () => {
     const introTexts = [text1, text2, text3];
     const ResearchTexts = [text4, text5, text6, text7, text8, text9, text10];
     const workExperienceTexts = [text11, text12, text13, text14, text15];
-
     const galleryImages = [img1, img2, img3, img4, img5, img6, img7];
-    const galleryTexts = [text21,text22,text23,text18, text19,text20];
+    const galleryTexts = [text21, text22, text23, text18, text19, text20];
 
     const renderContent = () => {
         switch (activeSection) {
@@ -71,7 +69,6 @@ const HeroSection: React.FC = () => {
     }, [activeSection]);
 
     const handlePrev = () => {
-        console.log(activeSection);
         switch (activeSection) {
             case 'home': setActiveSection('welcome'); break;
             case 'home2': setActiveSection('home'); break;
@@ -94,23 +91,18 @@ const HeroSection: React.FC = () => {
         }
     };
 
+    // Swipeable handlers
+    const swipeHandlers = useSwipeable({
+        onSwipedLeft: () => handleNext(),
+        onSwipedRight: () => handlePrev(),
+    });
 
     return (
-        <div className="hero-container">
+        <div className="hero-container" {...swipeHandlers}>
             <img src={backgroundImg} alt="Background" className="hero-background" />
-            <div className="navigation-buttons-sides-container">
-                <button className="navigation-button prev-button" onClick={handlePrev}>
-                    <i className="bi bi-arrow-left"></i>
-                </button>
-                <button className="navigation-button next-button" onClick={handleNext}>
-                    <i className="bi bi-arrow-right"></i>
-                </button>
-            </div>
             <div className="overlay">
-                   
-                    <div className='navbar-container'>
-                        <div className="button-group">
-                            
+                <div className='navbar-container'>
+                    <div className="button-group">
                         <Button
                             variant="primary"
                             onClick={() => setActiveSection('welcome')}
@@ -153,12 +145,9 @@ const HeroSection: React.FC = () => {
                         >
                             Contact
                         </Button>
-
-                        </div>
                     </div>
+                </div>
                 <Row className={`hero-content-main ${animationClass}`}>
-
-
                     <div className='empty-container'>
                         {activeSection === "welcome" &&
                             <div className='quote-logo-container'>
@@ -176,8 +165,8 @@ const HeroSection: React.FC = () => {
                         {renderContent()}
                     </div>
                 </Row>
-             </div>
-             <FooterBanner messages={[text25]}/>
+            </div>
+            <FooterBanner messages={[text25]}/>
         </div>
     );
 };
