@@ -16,8 +16,20 @@ const text13 = "Research Intern, Indian Railways, India";
 const text14 = "Assistant Professor, Department of AI/ML, SSIPMT, Raipur, India";
 const text15 = "Lecturer and Faculty of Computer Science, Teerthanker Mahaveer University, Moradabad, India";
 
-const text16 = " It is impossible to be a mathematician without being a poet in soul."
-const text17 = "  — Sofia Kovalevskaya, Russian mathematician"
+const text16 = " It is impossible to be a mathematician without being a poet in soul.";
+const text17 = "  — Sofia Kovalevskaya, Russian mathematician";
+
+
+const text18 = "I enjoy a diverse range of hobbies, including sports, photography, and traveling, which fuel his passion for exploring new experiences and perspectives.";
+const text19 = "In my downtime, I engages in casual gaming and reading Manga, balancing an active lifestyle with relaxing pastimes.";
+const text20 = "Some of my favourites are Mangas are Vagabond and Berserk.";
+
+const text21 = "In this gallery, you'll find a collection of my favorite shots, capturing moments from my travels and adventures in photography."; 
+const text22 = "Each image reflects my passion for exploring diverse landscapes, unique perspectives, and the beauty of everyday life. "
+const text23 = "Whether it's a fleeting moment of nature or an urban scene, these photos represent the essence of my experiences behind the lens.";
+
+const text24 = "For professional consultancy, research collaborations, or partnership inquiries, please feel free to reach out directly at 9566215595. I am open to exploring opportunities for collaboration and providing expert guidance in my areas of specialization. Let’s connect to discuss how we can work together to achieve impactful outcomes."
+const text25 = "Unless otherwise noted, all picture and video content on this website: Copyright 2024 by ©Ayush Banerjee. All rights reserved.";
 
 export {
     text1, 
@@ -33,5 +45,8 @@ export {
     text11,
     text12,
     text13,
-    text14,text15,text16,text17
+    text14,text15,text16,text17,
+    text18,text19,text20,
+    text21,text22,text23,
+    text24, text25
 };

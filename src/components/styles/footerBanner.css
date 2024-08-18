@@ -1,0 +1,32 @@
+.footer-banner {
+    display: flex;
+    align-items: flex-start;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007bff; /* Background color of the banner */
+    color: white; /* Text color */
+    padding: 5px 2px;
+    z-index: 1000; /* Ensure the banner is on top of other content */
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3); /* Slight shadow to give depth */
+    transition: transform 0.3s ease;
+    background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0)
+    ); /* Fade background from left */
+}
+
+.footer-banner-message {
+    margin: 0;
+    font-size: 10px;
+}
+
+.footer-banner.show {
+    transform: translateY(0);
+}
+
+.footer-banner.hide {
+    transform: translateY(100%);
+}

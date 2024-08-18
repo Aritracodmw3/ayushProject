@@ -65,6 +65,12 @@
     background-color: #00241f;
     transform: scale(1);
   }
+
+  .custom-buttons.active_home{
+    outline: none;
+    background-color: #00a18c;
+    box-shadow: 0 0 0 4px rgba(0, 159, 180, 0.5);
+  }
   
   .custom-buttons:focus {
     outline: none;

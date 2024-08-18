@@ -3,12 +3,12 @@ import { Container, Row, Col, Nav, Tab } from 'react-bootstrap';
 import '../styles/hero-section.css';
 interface GalleryComponentProps {
     mainTitle: string; 
-    description?: any[];
-
+    iamges?: any[];
+    descriptions?: any[];
 }
 
 
-const GalleryComponent: React.FC<GalleryComponentProps> = ({mainTitle, description}) => {
+const GalleryComponent: React.FC<GalleryComponentProps> = ({mainTitle, iamges, descriptions}) => {
     return(
         <Container> 
         <Row className="hero-content">  
@@ -25,13 +25,16 @@ const GalleryComponent: React.FC<GalleryComponentProps> = ({mainTitle, descripti
                     <div className='divider'></div> 
 
                     <div className='description-flex'>
-                        {description?.map((image_item) => {
-                            return (
-                                
-                            <div className="center-image-container">
+                        {iamges?.map((image_item,index) => {
+                            return (                                
+                            <div className="center-image-container">                                
+                                {descriptions && descriptions[index] && 
+                                    <div className='title-subtitle-container'>                                    
+                                    <div className='subtitle'>{descriptions[index] || ""}</div>
+                                </div>
+                                }
                                 <img src={image_item} alt="Center" className="center-image" />
-                            </div>
-                        
+                            </div>                        
                             )
                         })}
                     </div>

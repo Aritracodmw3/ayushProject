@@ -6,10 +6,11 @@ interface ContactComponentProps {
     mainTitle: string; 
     postImage: any[];
     list_items?: string[] | JSX.Element[];
+    finalNOte: string;
 }
 
 
-const ContactComponent: React.FC<ContactComponentProps> = ({mainTitle, postImage, list_items}) => {
+const ContactComponent: React.FC<ContactComponentProps> = ({mainTitle, postImage, list_items, finalNOte}) => {
     return(
         <Container> 
         <Row className="hero-content">  
@@ -35,12 +36,9 @@ const ContactComponent: React.FC<ContactComponentProps> = ({mainTitle, postImage
                             )
                         })
                     }
-                    <div className="center-image-container-overlay">                 
-                        <img src={postImage[1]} alt="Center" className="center-image-overlay" />
-                        <div className="image-overlay">
-                            <div className="overlay-text">THANK YOU FOR YOUR TIME</div>
-                        </div>
-                    </div>
+                    <div className='description'>{finalNOte}</div>
+
+
                 </div>    
 
             </div>
